@@ -11,16 +11,20 @@ try:
 
     mycursor.execute("SHOW DATABASES")
     results = mycursor.fetchall()
-    print(results)
+    # print(results)
 
     # move to the next result set
-    mycursor.nextset()
+    # mycursor.nextset()
 
     mycursor.execute("CREATE DATABASE IF NOT EXISTS Housing")
 
     # fetch all the results
-    results = mycursor.fetchall()
-    print(results)
+    # results = mycursor.fetchall()
+    # print(results)
+
+    mycursor.execute("USE HOUSING")
+    # results = mycursor.fetchall()
+    # print(results)
 
     for x in mycursor:
         print(x)
